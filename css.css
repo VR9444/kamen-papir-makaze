@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+body{
+    margin: 0;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(81,84,230,1) 51%, rgba(119,0,255,1) 100%);
+    font-family: 'Varela Round', sans-serif;
+    overflow: hidden;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+.rezultat-wrapper{
+    display: flex;
+    background-color: white;
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 36px;
+    border-radius: 20px;
+    flex-direction: column;
+    box-shadow: 10px 5px 5px black;
+}
+.flex{
+    display: flex;
+}
+.rezultat.Protivnik{
+    margin-left: 30px;
+}
+.menu{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+.menu-item{
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 10px 5px 5px black;
+    transition: transform 0.2s;
+}
+.menu-item:hover{
+    transform: scale(1.1);
+}
+.menu-item:active{
+    transform: scale(1.03);
+}
+#modal-wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.modal{
+    padding: 50px;
+    border-radius: 50px;
+    background-color: white;
+    width: 50%;
+    height: 50vh;
+    position: relative;
+}
+#play_again{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 36px;
+    border: blue 2px solid;
+    background-color: blue;
+    color: white;
+    border-radius: 20px;
+    padding: 10px;
+    transition: 0.1s;
+}
+#play_again:hover{
+    color: blue;
+    background-color: white;
+}
+
+.modal #exit{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.modal #text-rezultat{
+    font-size: 36px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.modal .pobeda #slika1{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    animation-name: pobeda1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+  -moz-animation-fill-mode: forwards;    /* FF 5+ */
+  -o-animation-fill-mode: forwards;      /* Not implemented yet */
+  -ms-animation-fill-mode: forwards;     /* IE 10+ */
+  animation-fill-mode: forwards;         /* When the spec is finished */
+}
+
+.modal .pobeda #slika2{
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    transform: translateY(-50%);
+    animation-name: pobeda2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+  -moz-animation-fill-mode: forwards;    /* FF 5+ */
+  -o-animation-fill-mode: forwards;      /* Not implemented yet */
+  -ms-animation-fill-mode: forwards;     /* IE 10+ */
+  animation-fill-mode: forwards;         /* When the spec is finished */
+}
+
+@keyframes pobeda1 {
+    0%{ top: 50%; left: 25%;}
+    10%{ top: 45%; left: 40%; }
+    20%{ top: 50%; left: 60%;}
+    40%{ top: 50%; left: 50%; transform: translateX(-50%);}
+    100%{ top: 50%; left: 50%;  transform: translateX(-50%);}
+  }
+@keyframes pobeda2 {
+    0%{ top: 50%;}
+    20%{top: 50%;  right: 25%;}
+    23%{ right: -10%; }
+    25%{ right: -17%; top: 60%;}
+    27%{ right: -23%; top: 70%;}
+    29%{ right: -27%; top: 80%;}
+    32%{ right: -32%; top: 90%;}
+    34%{ right: -37%; top: 100%;}
+    36%{ right: -42%; top: 110%;}
+    38%{ right: -47%; top: 120%;}
+    40%{ right: -52%; top: 130%;}
+    42%{ right: -57%; top: 140%;}
+    44%{ right: -62%; top: 150%;}
+    46%{ right: -67%; top: 160%;}
+
+    100%{ right: -200%;}
+
+  }
+
+  .modal .gubitak #slika1{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    animation-name: gubitak1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+    -moz-animation-fill-mode: forwards;    /* FF 5+ */
+    -o-animation-fill-mode: forwards;      /* Not implemented yet */
+    -ms-animation-fill-mode: forwards;     /* IE 10+ */
+    animation-fill-mode: forwards;         /* When the spec is finished */
+}
+.modal .gubitak #slika2{
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    transform: translateY(-50%);
+    animation-name: gubitak2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+    -moz-animation-fill-mode: forwards;    /* FF 5+ */
+    -o-animation-fill-mode: forwards;      /* Not implemented yet */
+    -ms-animation-fill-mode: forwards;     /* IE 10+ */
+    animation-fill-mode: forwards;         /* When the spec is finished */
+}
+
+@keyframes gubitak1 {
+    0%{ top: 50%; left: 25%;}
+    20%{top: 50%;  left: 25%;}
+    23%{ left: -10%; }
+    25%{ left: -17%; top: 60%;}
+    27%{ left: -23%; top: 70%;}
+    29%{ left: -27%; top: 80%;}
+    32%{ left: -32%; top: 90%;}
+    34%{ left: -37%; top: 100%;}
+    36%{ left: -42%; top: 110%;}
+    38%{ left: -47%; top: 120%;}
+    40%{ left: -52%; top: 130%;}
+    42%{ left: -57%; top: 140%;}
+    44%{ left: -62%; top: 150%;}
+    46%{ left: -67%; top: 160%;}
+
+    100%{ left: -200%;}
+}
+@keyframes gubitak2{
+    0%{ top: 50%; right: 25%;}
+    10%{ top: 45%; right: 40%; }
+    20%{ top: 50%; right: 60%;}
+    40%{ top: 50%; right: 50%; transform: translateX(50%);}
+    100%{ top: 50%; right: 50%;  transform: translateX(50%);}
+
+}
+
+.modal .nereseno #slika1{
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translateY(-50%);
+    animation-name: nereseno1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+    -moz-animation-fill-mode: forwards;    /* FF 5+ */
+    -o-animation-fill-mode: forwards;      /* Not implemented yet */
+    -ms-animation-fill-mode: forwards;     /* IE 10+ */
+    animation-fill-mode: forwards;         /* When the spec is finished */
+}
+
+.modal .nereseno #slika2{
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    transform: translateY(-50%);
+    animation-name: nereseno2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+    -moz-animation-fill-mode: forwards;    /* FF 5+ */
+    -o-animation-fill-mode: forwards;      /* Not implemented yet */
+    -ms-animation-fill-mode: forwards;     /* IE 10+ */
+    animation-fill-mode: forwards;         /* When the spec is finished */
+}
+
+@keyframes nereseno1 {
+    0%{ top: 50%; left: 25%;}
+    19%{ left: 40%; top: 45%; }
+    20%{top: 50%;  left: 25%;}
+    23%{ left: -10%; }
+    25%{ left: -17%; top: 60%;}
+    27%{ left: -23%; top: 70%;}
+    29%{ left: -27%; top: 80%;}
+    32%{ left: -32%; top: 90%;}
+    34%{ left: -37%; top: 100%;}
+    36%{ left: -42%; top: 110%;}
+    38%{ left: -47%; top: 120%;}
+    40%{ left: -52%; top: 130%;}
+    42%{ left: -57%; top: 140%;}
+    44%{ left: -62%; top: 150%;}
+    46%{ left: -67%; top: 160%;}
+
+    100%{ left: -200%;}
+    
+}
+
+@keyframes nereseno2 {
+    0%{ top: 50%; right: 25%;}
+    19%{ right: 40%; top: 45%; }
+    20%{top: 50%;  right: 25%;}
+    23%{ right: -10%; }
+    25%{ right: -17%; top: 60%;}
+    27%{ right: -23%; top: 70%;}
+    29%{ right: -27%; top: 80%;}
+    32%{ right: -32%; top: 90%;}
+    34%{ right: -37%; top: 100%;}
+    36%{ right: -42%; top: 110%;}
+    38%{ right: -47%; top: 120%;}
+    40%{ right: -52%; top: 130%;}
+    42%{ right: -57%; top: 140%;}
+    44%{ right: -62%; top: 150%;}
+    46%{ right: -67%; top: 160%;}
+
+    100%{ right: -200%;}
+}
+
+
+
+@media only screen and (max-width: 600px) {
+  .menu{
+      flex-direction: column;
+  }
+  }
